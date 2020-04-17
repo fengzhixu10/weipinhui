@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>唯品会注册、登录</title>
+<style type="text/css">
+*{margin:0 auto;padding:0; list-style:none; text-decoration:none;}
+#container{width:100%;height:100%;float:left;}
+#head{width:100%;height:80px;float:left; text-align:center;line-height:80px;}
+#head img{vertical-align:middle;}
+#head-left{width:40%;height:80px;float:left;}
+#head-left img{width:30%; height:100%; vertical-align:middle;}
+#head-right{width:60%;height:80px;float:right;}
+#content{width:100%;height:800px;background:#F99;float:left; background: url(img/shopping1.png) no-repeat;}
+#content-main{width:20%;height:50%;float:left;background:#FFF; border-radius:10px; margin-left:65%;margin-top:5%; }
+#content1{width:100%;height:10%;float:left;font-size:26px; border-bottom:1px solid #CCC;font-weight:bolder;text-align:center; line-height:200%;}
+#content a{display:block;color:#000000;}
+#content a:hover{color:#F0C;}
+#apDiv1{width:100%;height:90%;float:left;}
+#register{width: 100%;height:100%;float: left;position: relative;}
+ #register  input[type="text"],#register input[type="password"]{background:none;  display: block;  margin:0 auto; text-align: center;  border:1px solid black;  padding:6% 6%;  width:78%;  outline: none;  color:#333;  border-radius: 4px;  transition: 0.25s; margin-top:10%;}
+#register input[type="text"]:focus,input[type="password"]:focus{  border-color:rosybrown;  }
+#z{width:100%;height:15%;float: left;margin-top: 5%;}
+        #z1{float: left;width:45%;height:100%;}
+        #z2{float: right;width:31%;height:5%;background:none;  display: block;  margin:0 auto; text-align: center;  padding:2% 6%;  outline: none;  color:#333;  border-radius: 4px;  transition: 0.25s;background:#F3C;border:none;margin-right:2%;}
+		#z2 a{display:block;}
+		#z2 a:hover{color:#FFF;}
+		#z1 input[type="submit"]{background:none;  display: block;  margin:0 auto; text-align: center;  padding:6% 6%;  width:88%; outline: none;  color:#333;  border-radius: 4px;  transition: 0.25s;background:#F3C;border:none; }
+		#z input[type="submit"]:hover{color:#FFF; }
+p{ line-height:40px; cursor:pointer;}
+
+
+#logon{width:100%;height:10%;float:left; text-align:center;}
+#logon img:hover{transform:scale(1.1)}
+</style>
+<script language=javascript>
+function check(f)
+{
+	if(f.user.value=="")
+	{
+		alert("请输入用户名！");
+		f.user.focus();
+		return false;
+	}
+	 else if(f.pw.value=="")
+	{
+		alert("请输入密码！");
+		f.pw.focus();
+		return false;
+	}
+	return false;
+}
+</script>
+</head>
+<body>
+<div id="container">
+	<div id="head">
+    	<div id="head-left">
+    		<img src="img/logo.jpg" />
+        </div>
+        <div id="head-right">
+        	<img src="img/zhengpin (1).png">100%正品&nbsp;
+           	<img src="img/tianfangxintui.png" />七天放心退&nbsp;
+            <img src="img/xianshiqianggou.png" />
+           	限时抢购 
+        </div>
+    </div>
+    <div id="content">
+    	<div id="content-main">
+        	<div id="content1">
+            	<ul>
+                    <li style=" border-left:1px solid #CCC;" ><a href="#">账户登录</a></li>
+                </ul>
+            </div>
+            <div id="apDiv1">
+            	<div id="register" >
+                	<form onsubmit="return check(this)" action="">
+            		<input type="text" value placeholder="手机号/用户名/邮箱" name="user" />
+            		<input type="password" value placeholder="密码"  name="p"/>
+                    <p align="right"><a href="#">短信验证码登录</a> </p>
+                    <div id="z">
+        				<div id="z1">
+                        	<form method="post" action="index.html" >
+           				    	<input type="submit"  value="登录">  &nbsp;&nbsp;
+       						</form>
+                    	</div>
+        				<div id="z2">
+                 			<a href="index.html">返回</a>
+        				</div>
+                        </form>
+        			</div>
+                    <br />
+                    <hr size="1" />
+                     <div id="logon">
+                     	<a href=""><img src="img/weixin.png" /></a>
+                     </div>
+                     <p>新浪微博&nbsp;|&nbspQQ&nbsp;|&nbsp;支付宝&nbsp;&nbsp;更多&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注册</p>
+            	</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

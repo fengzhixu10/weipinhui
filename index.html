@@ -1,0 +1,1140 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>唯品会</title>
+<style>
+    *{margin:0 auto;padding:0; text-decoration:none; list-style:none;}
+    #head{width: 100%;height: 30px; background:rgba(0,0,0,0.1);}
+         #head ul{width: 100%;height: 30px;float: left;}
+         #head li{width:5%;height: 30px;float: left;text-align: center;line-height: 30px;font-size: 14px;}
+         #head li a{color: black;display: block;}
+         #head li a:hover{color:pink;background: white;}
+		 #head li img{vertical-align:middle;}
+    #search{width: 80%;height: 100px;}
+         #search-left{width: 45%;height: 100px;float: left;background: white; line-height:100px;}
+		 #search-left img{vertical-align:middle;}
+         #search-right{width: 55%;height: 100px;float: right;background: white;}
+         #search-right  input[type="text"]{background:none;  display: block; border:2px solid red;  padding:8px 10px;  width:60%;  outline: none;  color:black;  border-radius: 2px;  transition: 0.25s;margin-top: 3%; }
+         #search-right input[type="text"]:focus{  border-color:rosybrown;}
+		 #apDiv8{position: absolute;width:0.1%;height:0.1%;z-index: 1;left:79.5%;top: 6.8%;line-height: 50px; cursor:pointer;}
+         #search-right ul{width: 60%;height: 30px;float: left;margin-left: 20%;}
+         #search-right li{width: 16%;height: 30px;float: left;text-align: center;line-height: 30px;font-size: 11px;}
+         #search-right a{display: block;color: cadetblue;}
+         #search-right a:hover{color: red;}
+    #classify{width: 80%;height: 50px;}
+	#classify ul{width:100%;height:50px;float:left;}
+	#classify ul li{width:10%;height:50px;float:left; text-align:center; line-height:50px;}
+	#classify li:first-child a{ background:#F39;color:#FFF; font-weight:bolder;}
+	#classify li img{vertical-align:middle;}
+	#classify dd{width:100%;height:50px;float:left;display:none;line-height:50px;}
+	#classify a{display:block;color:black;}
+	#classify ul li dt{display: none;}
+	#classify  ul  li:hover dd{display:block;animation: plan 0.2s linear normal;color:#FFF;}
+	#classify dd a:hover{color:#F39;background:#FFF;}
+	 @keyframes plan {
+            0%,50%{
+                transform: rotateX(85deg) rotateZ(60deg);
+            }
+            70%,100%{
+                transform: rotateX(0deg) rotateZ(0deg);
+            }
+        }
+	#content1{width:100%;height:400px; background-image:url(img/qiang.JPG);}	
+	#content2{width:80%;height:600px;font-size:24px;margin-top:2%}
+	#content2 img{margin:1%;width:30%;height:220px;}
+    	#left-one{width:48%;height:280px;float:left;border:1px solid #CCC;}
+		#right-one{width:48%;height:280px;float:right;border:1px solid #CCC;}
+		#content{width:100%;height:280px;float:left;border:1px solid #CCC;margin-top:20px;}
+		#content img{margin:1%;width:14%;height:220px;}
+	#content3-1,#content3-2,#content3-3,#content3-4,#content3-5,#content3-6,#content3-7,#content3-8{width:80%;height:800px;line-height:30px;font-size:30px;margin-top:20px;}
+	p a{display:block;color:#000;}
+	p a:hover{color:#F09;}
+		#brand{width:100%;height:750px;float:left;line-height:30px;font-size:20px;border:1px solid #000; margin-bottom:20px;}
+		#brand img{width:100%;height:280px;}
+		#brand >ul{width:100%;height:350px;float:left;}
+			#brand > ul > li{width:48%;height:350px;float:left;margin:1%;position: relative;}
+			#brand li a{display:block;color:#F0C;}
+        #brand >li a:hover{background: yellow;}
+        #brand >ul >li >ul{display: none;position: absolute;left:0;top:0;width: 100%;height: 280px;background:rgba(0,0,0,0.2); cursor:pointer; }
+			#collect{width:25%;height:30px;background:#FFF;text-align:center; border-radius:50px;float:left; line-height:30px;font-size:18px;margin-top:246px;margin-left:74.5%;border:1px solid #000;}
+				#collect a{display:block;}
+				#collect a:hover{color:#000;}
+			#collect img{ vertical-align:middle;}
+		#brand >ul >li >ul img{width:12%;height:20px;}
+        #brand >ul >li >ul:hover{display: block;}
+		#brand >ul >li a:hover~ul{display: block;}
+	#content-bottom{width:80%;height:550px;line-height:30px;font-size:20px;margin-top:20px;}
+	    #content-bottom img{width:100%;height:140px;}
+		#content-bottom ul{width:100%;height:160px;float:left;}
+			#content-bottom li{width:23%;height:160px;float:left;margin:1%;}
+			#content-bottom li a{display:block;color:#000;}
+			#content-bottom li img:hover{transform:scale(1.1);transition:1s; border-radius:10px;}
+	#ending{width:80%;height:auto; text-align:center; line-height:30px; font-size:15px;margin-top:50px;}
+		#ending1{width:100%;height:40px;background:#F0C; text-align:center; line-height:40px;float:left;color:#FFF;}
+	#side{width:30px;height:100%;position:fixed;top:0;right:0;background:#000;}	
+		#side ul{width:30px;height:100%;float:left;}
+			#side li{width:30px;height:11%;float:left; text-align:center;}
+			#side a{display:block;color:#FFF;}
+	
+#apDiv1,#apDiv2,#apDiv3,#apDiv4,#apDiv5,#apDiv6,#apDiv7 {
+	position: absolute;
+	width: 60%;
+	height: 50%;
+	z-index: 1;
+	left:18%;
+	top: 24.5%;
+	background: #FFF;
+	text-indent: 2pc;
+	line-height: 50px;
+	font-size: 12px;
+}
+</style>
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+
+</head>
+<body onLoad="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+<div id="container">
+    <div id="head">
+        <ul>
+            <li style="width: 37%;left:100px;">
+            	<a href="#">
+                	位置<img src="img/weizhi.png">
+              </a>
+            </li>
+            <li>
+            	<a href="logon.html">
+                	请登录
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+            		注册
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+                <img src="img/liwu.png">
+            		签到
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		我的订单
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		我的特卖
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		会员俱乐部
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		客户服务
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		手机
+                    <img src="img/shouji.png">
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		更多
+            	</a>
+            </li>
+        </ul>
+    </div>
+    <div id="search">
+        <div id="search-left">
+        <img src="img/logo.jpg" width="35%">&nbsp;&nbsp;
+        <img src="img/zhengpin (1).png">100%正品&nbsp;&nbsp;
+        <img src="img/ccgl-tuihuoguanli-5.png">七天放心退&nbsp;&nbsp;
+        <img src="img/huiyuan-.png">
+        </div>
+        <div id="search-right">
+        <input type="text" value placeholder="请搜索您心仪的物品">
+        <div id="apDiv8"><a href="#"><img src="img/sousuo.png"></a></div>
+            <ul>
+                <li>
+                	<a href="#">
+                    	女士大衣
+                     </a>
+                </li>
+                <li>
+                	<a href="#">
+                		女靴
+                	</a>
+                </li>
+                <li>
+                	<a href="#">
+                		女士服装
+                	</a>
+                </li>
+                <li>
+                	<a href="#">
+                		连衣裙
+                	</a>
+                </li>
+                <li>
+                	<a href="#">
+                		毛绒娃娃
+                	</a>
+                </li>
+                <li>
+                	<a href="#">
+                		礼品
+                	</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<div id="apDiv1">
+  	<p><B>人气美衣></B>  T恤 衬衫 连衣裙 外套 短外套 卫衣 防晒衣 雪纺衫 针织衫 小西装 风衣 马甲 羽绒 棉衣 毛衣 大衣 羊绒/羊毛衫 皮衣/皮草 套装</p>
+    <p><B>女夏装></B>休闲裤 半身裙 打底裤 西装裤 牛仔裤 阔腿裤 短裤 连体/背带裤 哈伦裤 牛仔裙</p>
+    <p><B>特色女装></B>设计师 民族风 礼服/旗袍 中老年女装 时尚套装</p>
+    <p><B>男上装 ></B>短袖T恤 棉衣 大衣 棒球服 毛衣 羽绒服 皮衣 马甲/背心 风衣 长袖T恤 外套 皮肤衣 针织衫 Polo衫 夹克 西装 卫衣 衬衫 羊绒/羊毛衫</p>
+    <p><B>男下装 ></B>短裤 运动裤 西裤 牛仔短裤 牛仔裤 哈伦裤 夏季裤装 工装裤 亚麻裤 冬季裤装 加绒裤 小脚裤 休闲裤 九分裤</p>
+    <p><B>特色男装></B> 中老年 职场精英 大码 运动着装 街头潮流 中国风 时尚休闲 情侣装</p>
+    <p><B>女士内衣></B> 聚拢文胸 无钢圈文胸 文胸套装 薄杯文胸 运动文胸 调整型文胸 美背文胸 睡衣/家居服 睡裙/睡袍 纯棉睡衣 女士内裤 纯棉内裤 女袜 丝袜/裤袜 塑身内衣</p>
+</div>
+<div id="apDiv2">
+<p><B>女单鞋 ></B>高跟鞋 尖头鞋 平底鞋 深口单鞋 粗跟鞋 穆勒鞋 浅口单鞋 低跟鞋 厚底鞋布鞋</p>
+<p><B>女休闲鞋></B> 运动鞋 板鞋 小白鞋 乐福鞋</p> 
+<p><B>女凉鞋 ></B> 一字带凉鞋 平底凉鞋 凉拖 绑带凉鞋 粗跟凉鞋 鱼嘴鞋</p> 
+<p><B>男休闲鞋></B> 帆布鞋 豆豆鞋 一脚蹬 小白鞋 乐福鞋 休闲皮鞋 
+<p><B>男商务鞋></B> 套脚商务鞋 德比鞋 系带商务鞋 休闲皮鞋 冲孔鞋 英伦鞋 布洛克鞋 增高鞋 正装鞋</p> 
+</div>
+<div id="apDiv3">
+<p><B>面部护肤></B>面霜 面部喷雾 防晒面部精华 唇部护理T区护理眼部护理 洗面奶化妆水T区护理/去角质护肤套装眼霜洁面晚霜嗜喱日霜卸妆补水面膜乳液</p>
+<p><B>彩妆香水></B>香水套装CC霜唇釉修颜妆前乳定妆喷雾BB霜/气垫 眼唇卸妆唇妆粉饼限线液/有 甲彩妆套装蜜粉眉粉粉底液眼影眉笔气垫bb遮瑕</p>
+<p><B>洗发护发></B>沐浴润 体发胶/发膜 定型护发精油 发膜染发护发无硅油洗发水洗发水防脱洗发水</p>
+<p><B>洗护套装护发素></B>身体乳护肤皂沐浴套装沐浴油/磨砂 沐浴需沐浴工具
+口腔护理>牙刷/牙线 牙育牙贴漱口水 口腔护理电动牙刷</p>
+</div>
+<div id="apDiv4">
+<p><B>运动服 ></B> 短袖T恤 运动裤 运动POLO 大logoT恤 潮服 运动套装 运动短裤 运动外套 运动夹克 女款裙子 速干T恤 运动卫衣 运动内衣 针织裤 </p>
+<p><B>运动鞋包></B> 运动休闲鞋 跑鞋 篮球鞋 凉拖鞋 帆布鞋 板鞋 足球鞋 小白鞋 老爹鞋 气垫鞋 潮鞋 运动背包 运动腰包 </p>
+<p><B>户外服 ></B> 皮肤风衣 户外T恤 速干衣 速干裤 户外休闲裤 软壳衣裤 冲锋衣裤 户外外套 功能内衣裤 抓绒衣裤 </p>
+<p><B>户外鞋 ></B> 徒步鞋 户外跑鞋 沙滩/凉拖鞋 溯溪鞋 越野鞋 登山鞋 工装靴</p>
+<p><B>运动配件</B> 运动包 运动袜 帽子 手套 护具 棒球帽 运动毛巾 水壶</p>
+</div>
+<div id="apDiv5">
+<p><B>热销手机手机配件></B>原装配件 苹果周边移动电源手机储存卡 手机耳机手机保护套 手机贴膜车载配件拍照配件数据线手机支架充电器</p>
+<p><B>智能影音></B>运动手环智能手表 耳机蓝牙耳机运动耳机便携/无线音箱 音箱/音响 投影仪智能监控</p>
+<p><B>电脑办公></B>平板电脑笔记本台式机- 体机显示器电纸书投影仪鼠标/键盘 U盘路由器平板电脑配件电子游戏设备插座其他电脑外设
+平板电脑笔记本台式机- 体机显示器</p>
+<p><B>摄影></B>单反相机数码相机微单/单电 摄像机自拍神器 拍立得</p>
+</div>
+<div id="apDiv6">
+<P><B>家纺床品></B>床上套件枕头婚庆床品全棉套件 床单/床笠 床垫床褥 毛毯被芯枕套被套儿童床品酒店家纺凉席蚊帐</P>
+<p><B>纸品/百贯></B>毛浴巾家居拖鞋浴室用品拖把个人用品 香薰用品纸巾洗衣液洁厕液清洁刷家庭清洁剂宠物日用净化除味-次性用品</p>
+<p><B>杯壶餐具></B>保温杯壶玻璃杯马克杯筷勺刀叉碗碟盘保鲜/饭盒 咖啡具茶具</p>
+<p><B>烹任炊具></B>锅具厨房置物架 刀具/剪刀 砧板调味瓶罐 厨用小工具 清洁保鲜 -次性用品 烧烤/烘焙</p>
+<p><B>收纳晾晒></B>收纳柜收纳箱 收纳盒 收纳包袋收纳架防尘罩 压缩袋衣架/振架 晾晒架鞋果</p>
+<p><B>家饰布艺></B>钟饰/摆件 装饰画抱枕/靠枕 坐垫/靠垫 桌布罩件 窗帘窗纱 地毯地垫 照片墙/相框 花瓶/仿真花鲜花绿植墙饰墙纸/墙贴</p>
+</div>
+<div id="apDiv7">
+<p><B>全球馆 ></B> 欧洲馆 美洲馆 港台馆 日本馆 韩国馆 澳新馆</p>
+<p><B>国际美妆></B> 彩妆 洗面奶 面膜 水乳面霜 防晒修复 口红 护肤套装 眼部护理 男士护理 洗护染发 女性护理 个人护理 面部精华 爽肤水乳 卸妆</p>
+<p><B>唯品奢·女装></B> T恤 衬衫 外套 卫衣 西服 连衣裙 半身裙 牛仔裤 休闲裤 家居服 </p>
+<p><B>环球母婴></B> 孕婴营养 儿童营养 洗护喂养 奶粉 纸尿裤 婴童辅食 玩具出行 妈咪用品 童装童鞋</p>
+<p><B>唯品奢·男装></B> POLO衫 T恤 卫衣 背心 衬衫 家居服 西服 外套 休闲裤 西裤 牛仔裤 短裤 内裤</p>
+</div>
+<div id="classify">
+        <ul>
+            <li>
+            	<a href="index.html">
+                	商品分类
+           		<img src="img/category.png">
+                </a>
+           	  <dt>
+                        	<a href="#">
+                    	<dd onmouseover="MM_showHideLayers('apDiv1','','show','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            女装/男装
+                          </dd></a>
+                        
+              <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','show','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            女鞋/男鞋
+                            </a>
+              </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','show','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            护肤彩妆
+                            </a>
+                        </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','show','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            运动户外
+                            </a>
+                        </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','show','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide'),'apDiv7','','hide'">
+                        	<a href="#">
+                            家电数码
+                            </a>
+                        </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','show','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            居家用品
+                        	</a>
+                        </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','show')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            唯品国际
+                        	</a>
+                        </dd>
+                    </dt>
+            </li>
+            <li>
+            	<a href="#">
+            		首页
+            	</a>
+            </li>
+            <li>
+            	<a href="shopping-spree.html">
+            		唯品快抢
+            	</a>
+            </li>
+            <li>
+            	<a href="#content3-1">
+            		精品
+            	</a>
+            </li>
+          <li>
+            	<a href="#content3-2">
+            		女装
+            	</a>
+            </li>
+            <li>
+            	<a href="#content3-3">
+            		男装
+           	  </a>
+            </li>
+            <li>
+            	<a href="#content3-4">
+            		运动
+           	  </a>
+            </li>
+            <li>
+            	<a href="#content3-5">
+            		饰品
+            	</a>
+            </li>
+            <li>
+            	<a href="#content3-6">
+            		美妆
+            	</a>
+            </li>
+            
+          <li>
+            	<a href="#">
+           		 更多
+            		<img src="img/arrow-down.png">
+                    <dt>
+           	<dd><a href="#content3-7">居家品牌</dd></a>
+                        <dd><a href="#content3-8">国际品牌</a></dd>
+                        <dd><a href="#content-bottom">预告</a></dd>
+                    </dt>
+            	</a>
+            </li>
+        </ul>
+    </div>
+    <div id="content1">
+    </div>
+    <div id="content2">
+    <p align="center">每日必看区</p>
+    <hr size="3">
+        <div id="left-one">
+        	最后疯抢*三折封顶  每日早十晚八上新<br>
+        	<img src="img/yiren.JPG">
+        	<img src="img/fei.JPG">
+        	<img src="img/shen.JPG">
+        </div>
+        <div id="right-one">
+        	排行榜 90%的会员都在买<br>
+        	<img src="img/kuzi.JPG">
+        	<img src="img/shuiyi.JPG">
+        	<img src="img/majia.JPG">
+        </div>
+        <div id="content">
+        	唯品快抢*品质好物天天低价<br>
+    		<img src="img/zhimei.JPG">
+    		<img src="img/jiafang.JPG">
+    		<img src="img/jingyou.JPG">
+    		<img src="img/faguo.JPG">
+    		<img src="img/jiafangi.JPG">
+    		<img src="img/xiaomihu.JPG">
+    	</div>
+    </div>
+    <div id="content3-1">
+    	<p align="center">——新特卖每日早十晚八上新——</p>
+		<p><a href="xiebao.html">精选品牌</a></p>
+        <hr size="2" color="#000000" width="20%">
+		<div id="brand">
+			<ul>
+				<li>
+                	<a href="#">
+                    	<img src="img/one.JPG">
+            			<p>冬日精选-三彩女装专场</p>
+            			<p>0.8折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/two.JPG">
+            			<p>今典CLASSICS STORY皮草男女混合专场</p>
+            			<p>2.6折封顶|部分商品折上3.3折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+                	<a href="#">
+                    	<img src="img/three.JPG">
+           	 			<p>诺帝卡Nautica男女装混合场</p>
+            			<p>0.7折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/four.JPG">
+            			<p>雅诗兰黛集团大牌护肤专场</p>
+            			<p>4.5折封顶|部分商品折上3.3折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+			</ul>
+		</div>
+	</div>
+    <div id="content3-2">
+		<p><a href="">女装品牌</a></p>
+        <hr size="2" color="#000000" width="20%">
+		<div id="brand">
+			<ul>
+				<li>
+                	<a href="#">
+                    	<img src="img/one1.JPG">
+            			<p>Roey s house女装精选专场</p>
+            			<p>4.3折封顶</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+                	<a href="#">
+                    	<img src="img/two2.JPG">
+            			<p>专柜品牌 雅莹女装专场</p>
+            			<p>1折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/three2.JPG">
+            			<p>宏达HONDAR配饰专场</p>
+            			<p>4折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/four2.JPG">
+            			<p>可可尼cocoon专场</p>
+            			<p>1.5折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+			</ul>
+		</div>
+	</div>
+    <div id="content3-3">
+		<p><a href="">男装品牌</a></p>
+        <hr size="2" color="#000000" width="20%">
+		<div id="brand">
+			<ul>
+				<li>
+                	<a href="#">
+                    	<img src="img/one3.JPG">
+            			<p>人气男装品牌聚献专场</p>
+            			<p>3.6折封顶</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>	
+                	<a href="#">
+                    	<img src="img/two3.JPG">
+            			<p>堡马POSEMER男装品质专场</p>
+            			<p>5折封顶</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/three3.JPG">
+            			<p>Dickies箱包服饰格调专场</p>
+            			<p>3.2折起</p>
+                    </a>
+                        <ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/four3.JPG">
+            			<p>森马SEMIR男裤专场</p>
+            			<p>1.5折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+			</ul>
+		</div>
+	</div>
+    <div id="content3-4">
+		<p><a href="">运动品牌</a></p>
+        <hr size="2" color="#000000" width="20%">
+		<div id="brand">
+			<ul>
+				<li>
+                	<a href="#">
+                    	<img src="img/one4.JPG">
+            			<p>耐克Nike运动休闲鞋精选专场</p>
+            			<p>3.9折封顶</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/two4.JPG">
+            			<p>匡威converse运动户外品质专场</p>
+           				<p>2.5折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/three4.JPG">
+            			<p>森马SEMIR男女运动服品质专场</p>
+            			<p>1.5折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/four4.JPG">
+            			<p>Jack Wolfskin户外男女装精选专场</p>
+           			 <p>1.9折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+			</ul>
+		</div>
+	</div>
+    <div id="content3-5">
+		<p><a href="">饰品品牌</a></p>
+        <hr size="2" color="#000000" width="20%">
+		<div id="brand">
+			<ul>
+				<li>
+                	<a href="#">
+                    	<img src="img/one5.JPG">
+            			<p>古驰GUCCI好货超值购</p>
+            			<p>4.1折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/two5.JPG">
+            			<p>谢瑞麟TSL珠宝饰品品质专场</p>
+            			<p>4折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/three5.JPG">
+            			<p>范思哲VERSACE精选专场</p>
+            			<p>1.9折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+				<li>
+                	<a href="#">
+                    	<img src="img/four5.JPG">
+            			<p>六福珠宝珠宝饰品品质专场</p>
+            			<p>7.8折起|部分商品折上5折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+			</ul>
+		</div>
+	</div>  
+    <div id="content3-6">
+		<p><a href="beauty-makeup.html">美妆品牌</a></p>
+        <hr size="2" color="#000000" width="20%">
+		<div id="brand">
+			<ul>
+				<li>
+                	<a href="#">
+                    	<img src="img/one6.JPG">
+            			<p>SK—II面部护理折扣专场</p>
+            			<p>6.1折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+                	<a href="#">
+                    	<img src="img/two6.JPG">
+            			<p>菲拉格慕FERRAGAMO香水精选特惠专场</p>
+            			<p>2.4折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+                	<a href="#">
+                    	<img src="img/three6.JPG">
+            			<p>法国娇兰Guerlain护肤彩妆格调专场</p>
+            			<p>3.1折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+                	<a href="#">
+                    	<img src="img/four6.JPG">
+            			<p>大牌抢购ing云南白药牙膏惠购专场</p>
+            			<p>4.7折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+			</ul>
+		</div>
+	</div>  
+    <div id="content3-7">
+		<p><a href="">居家品牌</a></p>
+        <hr size="2" color="#000000" width="20%">
+		<div id="brand">
+			<ul>
+				<li>
+                	<a href="#">
+                    	<img src="img/one7.JPG">
+            			<p>精选WMF餐厨用具品质专场</p>
+            			<p>2.4折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+                	<a href="#">
+                    	<img src="img/two7.JPG">
+            			<p>精选奇居良品餐厨用具品质专场</p>
+            			<p>2.4折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+                	<a href="#">
+                    	<img src="img/three7.JPG">
+            			<p>人气膳魔师THERMOS水壶水杯品牌联促专场</p>
+            			<p>1.7折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+                	<a href="#">
+                    	<img src="img/four7.JPG">
+            			<p>大牌抢购ing香自吟餐厨用具惠购专场</p>
+            			<p>1.2折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+			</ul>
+		</div>
+	</div>
+    <div id="content3-8">
+		<p><a href="">国际品牌</a></p>
+        <hr size="2" color="#000000" width="20%">
+		<div id="brand">
+			<ul>
+				<li>
+                	<a href="#">
+                    	<img src="img/one9.JPG">
+            			<p>热销水壶水杯精选TOP榜单</p>
+            			<p>4.9折封顶</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+            		<a href="#">
+            			<img src="img/two9.JPG">
+            			<p>MCM女包特卖专场</p>
+            			<p>5.6折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+            		<a href="#">
+                    	<img src="img/three9.JPG">
+            			<p>Calvin Klein折扣专场</p>
+            			<p>2.3折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+            	</li>
+				<li>
+            		<a href="#">
+                    	<img src="img/four9.JPG">
+            			<p>ampMONACO珠宝饰品折扣专场</p>
+            			<p>1.8折起</p>
+            		</a>
+                    	<ul>
+                        	<li>
+                            	<div id="collect">
+                                	<a href="#">
+                                		<img src="img/shoucang4.png" >
+                                    	收藏品牌
+                                    </a>
+                                </div>
+                           </li>
+                        </ul>
+                </li>
+			</ul>
+		</div>
+	</div> 
+    <div id="content-bottom">
+    <p align="center"><a href="yugao.html">明日预告</a></p>
+    <hr size="6">
+        <ul>
+			<li>
+            	<a href="#">
+                	<img src="img/yugao1.jpg">
+            		<p>贝尔BEIER—男女包11.1...2.9折</p>
+            	</a>
+            </li>
+			<li>
+            	<a href="#">
+                	<img src="img/yugao2.jpg">
+           			<p>CoupDeFouder箱包专场 3.5折起</p>
+            	</a>
+            </li>
+			<li>
+            	<a href="#">
+                	<img src="img/yugao3.jpg">
+            		<p>11.11狂欢低价购不停...5折封顶</p>
+            	</a>
+            </li>
+			<li>
+           		<a href="#">
+            		<img src="img/yugao4.jpg">
+            		<p>秋冬狂欢特卖节—...&nbsp; 4.1折封顶</p>
+            	</a>
+            </li>
+			<li>
+            	<a href="#">
+                	<img src="img/yugao5.jpg">
+            		<p>高美高COMICO女包—... 2折起</p>
+            	</a>
+            </li>
+			<li>
+            	<a href="#">
+            		<img src="img/yugao6.jpg">
+            		<p>CARDANRO皮包——... 0.5折起</p>
+            	</a>
+            </li>
+			<li>
+            <a href="#">
+            		<img src="img/yugao7.jpg">
+            		<p>限时直降击穿底价—.. 3.4折起</p>
+            	</a>
+            </li>
+			<li>	
+            	<a href="#">
+                	<img src="img/yugao8.jpg">
+            		<p>法国经典女包品牌—...&nbsp; 1.3折起</p>
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+                	<img src="img/yugao9.jpg">
+            		<p>JESSIE& JANE设计师... 4.3折</p>
+            	</a>
+            </li
+			><li>
+            	<a href="#">
+                	<img src="img/yugao10.jpg">
+            		<p>RAFURA——箱包...&nbsp;&nbsp;3.2折封顶</p>
+            	</a>
+            </li>
+			<li>
+            	<a href="#">
+                	<img src="img/yugao11.jpg">
+            		<p>New&nbsp;&nbsp;11.11限时购—&nbsp;... 1.3折</p>
+            	</a>
+            </li>
+			<li>
+            	<a href="#">
+                	<img src="img/yugao12.jpg">
+            		<p>New &nbsp;Balance运动鞋... 1.9折起</p>
+            	</a>
+            </li>            
+	   </ul>
+    </div>
+    <div id="ending">
+    <hr size="1" color="#000000"><br>
+    	<div id="ending1">关于我们| About us| Investor Relations| 媒体报道| 品牌招商| 隐私条款| 唯品诚聘| 唯品卡| 联系我们 </div>
+        <p>Copyright © 2008-2019 vip.com，All Rights Reserved  使用本网站即表示接受 唯品会用户协议。版权所有 广州唯品会电子商务有限公司</p> 
+<p><img src="img/police_icon.png">粤公网安备 44010302111111号    粤ICP备08114786号 增值业务经营许可证：粤B2-20170777  网络文化经营许可证：粤网文〔2018〕5030-1743号 </p>
+<p>自营主体经营证照   风险监测信息   互联网药品信息服务资格证书：（粤）-经营性-2018-0271 网络食品交易第三方平台备案凭证：粤B2-20170777  医疗器械网络交易服务第三方</p>
+<p>平台备案凭证：（粤）网械平台备字[2019]第00001号 </p>  
+    </div>
+	<div id="side">
+		<ul>
+			<li>
+            	<a href="#">
+                </a>
+          </li>
+			<li>
+            	<a href="logon.html">
+                	<img src="img/zhanghu (1).png">账号
+                </a>
+          </li>
+			<li>
+            	<a href="#">
+                	<img src="img/gouwudai (1).png">购物袋
+            	</a>
+          </li>
+			<li>
+            	<a href="#">
+                	<img src="img/youhuiquan.png">
+                </a>
+          </li>
+			<li>
+            	<a href="#">
+                	<img src="img/shoucangpinpaishoucang.png">
+                </a>
+          </li>
+			<li>
+            	<a href="#">
+                	<img src="img/shangjia-shoucangB.png">
+                </a>
+          </li>
+			<li>
+            	<a href="#">
+            		<img src="img/zuji.png">
+            	</a>
+          </li>
+		  <li>
+            	<a href="#">
+                	<img src="img/biji.png">
+                </a>
+          </li>
+			<li>
+            	<a href="#head">
+                	<img src="img/up.png">
+                </a>
+          </li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

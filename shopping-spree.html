@@ -1,0 +1,686 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>最后疯抢</title>
+	<style type="text/css">
+	*{margin: 0px;padding: 0px;list-style: none; text-decoration:none;}
+		#head{width: 100%;height: 30px; background:rgba(0,0,0,0.1);}
+         #head ul{width: 100%;height: 30px;float: left;}
+         #head li{width:5%;height: 30px;float: left;text-align: center;line-height: 30px;font-size: 14px;}
+         #head li a{color: black;display: block;}
+         #head li a:hover{color:pink;background: white;}
+		 #head li img{vertical-align:middle;}
+    #search{width: 80%;height: 100px;margin-left:10%;float:left;}
+         #search-left{width: 45%;height: 100px;float: left;background: white; line-height:100px;}
+		 #search-left img{vertical-align:middle;}
+         #search-right{width: 55%;height: 100px;float: right;background: white;}
+         #search-right  input[type="text"]{background:none;  display: block; border:2px solid red;  padding:8px 10px;  width:60%;  outline: none;  color:black;  border-radius: 2px;  transition: 0.25s;margin-top: 3%; }
+         #search-right input[type="text"]:focus{  border-color:rosybrown;}
+		 #apDiv8{position: absolute;width:0.1%;height:0.1%;z-index: 1;left:79.5%;top: 6.8%;line-height: 50px; cursor:pointer;}
+         #search-right ul{width: 60%;height: 30px;float: left;margin-left: 20%;}
+         #search-right li{width: 16%;height: 30px;float: left;text-align: center;line-height: 30px;font-size: 11px;}
+         #search-right a{display: block;color: cadetblue;}
+         #search-right a:hover{color: red;}
+    #classify{width: 80%;height: 50px;margin-left:10%;float:left;}
+	#classify ul{width:100%;height:50px;float:left;}
+	#classify ul li{width:10%;height:50px;float:left; text-align:center; line-height:50px;}
+	#classify li:first-child a{ background:#F39;color:#FFF; font-weight:bolder;}
+	#classify li img{vertical-align:middle;}
+	#classify dd{width:100%;height:50px;float:left;display:none;line-height:50px;}
+	#classify a{display:block;color:black;}
+	#classify ul li dt{display: none;}
+	#classify  ul  li:hover dd{display:block;animation: plan 0.2s linear normal;color:#FFF;}
+	#classify dd a:hover{color:#F39;background:#FFF;}
+	 @keyframes plan {
+            0%,50%{
+                transform: rotateX(85deg) rotateZ(60deg);
+            }
+            70%,100%{
+                transform: rotateX(0deg) rotateZ(0deg);
+            }
+        }
+	#content1{width:100%;height:400px; background-image:url(img/qiang.JPG);}	
+	#content2{width:80%;height:600px;font-size:24px;margin-top:2%}
+	#content2 img{margin:1%;width:30%;height:220px;}
+    	#left-one{width:48%;height:280px;float:left;border:1px solid #CCC;}
+		#right-one{width:48%;height:280px;float:right;border:1px solid #CCC;}
+		#content{width:100%;height:280px;float:left;border:1px solid #CCC;margin-top:20px;}
+		#content img{margin:1%;width:14%;height:220px;}
+	#content3-1,#content3-2,#content3-3,#content3-4,#content3-5,#content3-6,#content3-7,#content3-8{width:80%;height:800px;line-height:30px;font-size:30px;margin-top:20px;}
+	p a{display:block;color:#000;}
+	p a:hover{color:#F09;}
+		#brand{width:100%;height:750px;float:left;line-height:30px;font-size:20px;border:1px solid #000; margin-bottom:20px;}
+		#brand img{width:100%;height:280px;}
+		#brand >ul{width:100%;height:350px;float:left;}
+			#brand > ul > li{width:48%;height:350px;float:left;margin:1%;position: relative;}
+			#brand li a{display:block;color:#F0C;}
+        #brand >li a:hover{background: yellow;}
+        #brand >ul >li >ul{display: none;position: absolute;left:0;top:0;width: 100%;height: 280px;background:rgba(0,0,0,0.2); cursor:pointer; }
+			#collect{width:25%;height:30px;background:#FFF;text-align:center; border-radius:50px;float:left; line-height:30px;font-size:18px;margin-top:246px;margin-left:74.5%;border:1px solid #000;}
+				#collect a{display:block;}
+				#collect a:hover{color:#000;}
+			#collect img{ vertical-align:middle;}
+		#brand >ul >li >ul img{width:12%;height:20px;}
+        #brand >ul >li >ul:hover{display: block;}
+		#brand >ul >li a:hover~ul{display: block;}
+	#content-bottom{width:80%;height:550px;line-height:30px;font-size:20px;margin-top:20px;}
+	    #content-bottom img{width:100%;height:140px;}
+		#content-bottom ul{width:100%;height:160px;float:left;}
+			#content-bottom li{width:23%;height:160px;float:left;margin:1%;}
+			#content-bottom li a{display:block;color:#000;}
+			#content-bottom li img:hover{transform:scale(1.1);transition:1s; border-radius:10px;}
+	#ending{width:80%;height:auto; text-align:center; line-height:30px; font-size:15px;margin-top:50px;}
+		#ending1{width:100%;height:40px;background:#F0C; text-align:center; line-height:40px;float:left;color:#FFF;}
+	#side{width:30px;height:100%;position:fixed;top:0;right:0;background:#000;}	
+		#side ul{width:30px;height:100%;float:left;}
+			#side li{width:30px;height:10%;float:left; text-align:center;}
+			#side a{display:block;color:#FFF;}
+	
+#apDiv1,#apDiv2,#apDiv3,#apDiv4,#apDiv5,#apDiv6,#apDiv7 {
+	position: absolute;
+	width: 60%;
+	height: 50%;
+	z-index: 1;
+	left:18%;
+	top: 24.5%;
+	background: #FFF;
+	text-indent: 2pc;
+	line-height: 50px;
+	font-size: 12px;
+}
+	
+	.shang{width: 100%;height: 30%;}
+	.three{width: 30px;height: 3px;background:#FD628D;margin: auto}
+	.four{width: 1200px;height: 50px;margin: auto;margin-top: 10px;}
+	.zhong{width: 100%;height: 100px;float: left;}	
+		
+	#qwe{width: 1200px;height: 290px;margin-left: 160px;border:#FF0082 solid 1px;}
+	.ten{width: 236px;height: 290px;}
+	.ten-list{position: relative;width: 236px;height: 290px; padding: 50px 0;}
+	.ten-item-frist{height: 62px;width: 100%;}
+	.ten-item-frist:hover{background: #FF0082;}	
+	.ten-item-frist:hover .show{display: block;}
+	 .ten a{text-decoration: none;display: block;width: 100%;height: 42px;color: #000000;font-size: 16px;text-indent:60px ;line-height: 62px;}
+	.ten-item-frist a:hover{color: aliceblue;}	
+	.show{display: none;height: 290px;width: 964px;background:#F3E7E7;position: absolute;left: 236px;top: 0px;box-shadow: 0px 5px 30px #333}
+	.shop-item{width: 256px;height: 150px;line-height: 150px;float: left}
+	.shop-item img{vertical-align: middle;margin: 25px 25px;float: left;}
+		.tenzuo{width: 964px;height: 290px;float: right;}	
+		.tenzuo li{width: 256px;height: 150px;line-height: 150px;float: left}
+		.tenzuo img{vertical-align: middle;margin: 20px 15px;float: left;}
+		
+	#xia{width: 1200px;height: 410px;margin: auto ;}
+	#xia .zuo{width: 583px;height: 290px;float: left}
+	#xia .you{width: 583px;height: 290px;float: right}
+	#xia img:hover{filter: opacity(0.6)}
+	#end{width: 1200px;height: 210px;margin: auto;margin-top: -10px; }
+	#end .a{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#end .b{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#end .c{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#end .d{width: 182px;height: 220px;float: right;margin-right: 8px}
+	#end .e{width: 182px;height: 220px;float: right;margin-right: 8px}
+	#end .f{width: 182px;height: 220px;float:right;margin-right: 8px}
+	#end img:hover{transform: scale(1.08,1.08);transition:0.4s;}
+	#finally{width: 1200px;height: 50px;margin:auto;}
+	#finally .one{width: 583px;height: 65px;float: left}
+	#finally .two{width: 583px;height: 65px;float: right}
+	#finally img:hover{filter: opacity(0.6);}
+	#love{width: 1200px;height: 50px;margin:auto;}
+	#love .g{width: 583px;height: 300px;float: left}
+	#love .h{width: 583px;height: 300px;float: right}
+	#love img:hover{filter: opacity(0.6);}
+	#like{width: 1200px;height: 210px;margin: auto;margin-top: -10px; }
+	#like .i{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#like .j{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#like .k{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#like .l{width: 182px;height: 220px;float: right;margin-right: 8px}
+	#like .m{width: 182px;height: 220px;float: right;margin-right: 8px}
+	#like .n{width: 182px;height: 220px;float:right;margin-right: 8px}
+	#like img:hover{transform: scale(1.08,1.08);transition:0.4s;}
+	#lone{width: 1200px;height: 50px;margin:auto;}
+	#lone .o{width: 583px;height:65px;float: left}
+	#lone .p{width: 583px;height:65px;float: right}
+	#lone img:hover{transform: scale(1.1,1.1);transition:0.4s;}
+	#aaa{width: 1200px;height: 50px;margin:auto;}
+	#aaa .q{width: 583px;height: 300px;float: left}
+	#aaa .r{width: 583px;height: 300px;float: right}
+		#aaa img:hover{filter: opacity(0.6);}
+	#bbb{width: 1200px;height: 210px;margin: auto;margin-top: -10px; }
+	#bbb .aq{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#bbb .aw{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#bbb .ae{width: 182px;height: 220px;float: left;margin-left: 8px}
+	#bbb .ar{width: 182px;height: 220px;float: right;margin-right: 8px}
+	#bbb .at{width: 182px;height: 220px;float: right;margin-right: 8px}
+	#bbb .ay{width: 182px;height: 220px;float:right;margin-right: 8px}
+	#bbb img:hover{transform: scale(1.08,1.08);transition:0.4s;}
+	#ccc{width: 1200px;height: 650px;margin:auto;}
+	#ccc .au{width: 583px;height: 65px;float: left}
+	#ccc .ai{width: 583px;height: 65px;float: right}
+	#ccc img:hover{transform: scale(1.1,1.1);transition:0.4s;}
+	.nmb{width: 1200px;height: 40px;background: #FF0082;margin: auto}
+		.nmb{width: 1200px;height: 40px;background:#F0C;margin: auto;text-align: center}
+		#ending1{width:100%;height:40px;background:#F0C; text-align:center; line-height:40px;float:left;}
+	</style>
+	
+<script type="text/javascript">
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+	
+</head>
+<body onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+<div id="container">
+    <div id="head">
+        <ul>
+            <li style="width: 37%;left:100px;">
+            	<a href="#">
+                	位置<img src="img/weizhi.png">
+              </a>
+            </li>
+            <li>
+            	<a href="logon.html">
+                	请登录
+                </a>
+            </li>
+            <li>
+            	<a href="#">
+            		注册
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+                <img src="img/liwu.png">
+            		签到
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		我的订单
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		我的特卖
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		会员俱乐部
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		客户服务
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		手机
+                    <img src="img/shouji.png">
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		更多
+            	</a>
+            </li>
+        </ul>
+    </div>
+    <div id="search">
+        <div id="search-left">
+        <img src="img/logo.jpg" width="35%">&nbsp;&nbsp;
+        <img src="img/zhengpin (1).png">100%正品&nbsp;&nbsp;
+        <img src="img/ccgl-tuihuoguanli-5.png">七天放心退&nbsp;&nbsp;
+        <img src="img/huiyuan-.png">
+        </div>
+        <div id="search-right">
+        <input type="text" value placeholder="请搜索您心仪的物品">
+        <div id="apDiv8"><a href="#"><img src="img/sousuo.png"></a></div>
+            <ul>
+                <li>
+                	<a href="#">
+                    	女士大衣
+                     </a>
+                </li>
+                <li>
+                	<a href="#">
+                		女靴
+                	</a>
+                </li>
+                <li>
+                	<a href="#">
+                		女士服装
+                	</a>
+                </li>
+                <li>
+                	<a href="#">
+                		连衣裙
+                	</a>
+                </li>
+                <li>
+                	<a href="#">
+                		毛绒娃娃
+                	</a>
+                </li>
+                <li>
+                	<a href="#">
+                		礼品
+                	</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<div id="apDiv1">
+  	<p><B>人气美衣></B>  T恤 衬衫 连衣裙 外套 短外套 卫衣 防晒衣 雪纺衫 针织衫 小西装 风衣 马甲 羽绒 棉衣 毛衣 大衣 羊绒/羊毛衫 皮衣/皮草 套装</p>
+    <p><B>女夏装></B>休闲裤 半身裙 打底裤 西装裤 牛仔裤 阔腿裤 短裤 连体/背带裤 哈伦裤 牛仔裙</p>
+    <p><B>特色女装></B>设计师 民族风 礼服/旗袍 中老年女装 时尚套装</p>
+    <p><B>男上装 ></B>短袖T恤 棉衣 大衣 棒球服 毛衣 羽绒服 皮衣 马甲/背心 风衣 长袖T恤 外套 皮肤衣 针织衫 Polo衫 夹克 西装 卫衣 衬衫 羊绒/羊毛衫</p>
+    <p><B>男下装 ></B>短裤 运动裤 西裤 牛仔短裤 牛仔裤 哈伦裤 夏季裤装 工装裤 亚麻裤 冬季裤装 加绒裤 小脚裤 休闲裤 九分裤</p>
+    <p><B>特色男装></B> 中老年 职场精英 大码 运动着装 街头潮流 中国风 时尚休闲 情侣装</p>
+    <p><B>女士内衣></B> 聚拢文胸 无钢圈文胸 文胸套装 薄杯文胸 运动文胸 调整型文胸 美背文胸 睡衣/家居服 睡裙/睡袍 纯棉睡衣 女士内裤 纯棉内裤 女袜 丝袜/裤袜 塑身内衣</p>
+</div>
+<div id="apDiv2">
+<p><B>女单鞋 ></B>高跟鞋 尖头鞋 平底鞋 深口单鞋 粗跟鞋 穆勒鞋 浅口单鞋 低跟鞋 厚底鞋布鞋</p>
+<p><B>女休闲鞋></B> 运动鞋 板鞋 小白鞋 乐福鞋</p> 
+<p><B>女凉鞋 ></B> 一字带凉鞋 平底凉鞋 凉拖 绑带凉鞋 粗跟凉鞋 鱼嘴鞋</p> 
+<p><B>男休闲鞋></B> 帆布鞋 豆豆鞋 一脚蹬 小白鞋 乐福鞋 休闲皮鞋 
+<p><B>男商务鞋></B> 套脚商务鞋 德比鞋 系带商务鞋 休闲皮鞋 冲孔鞋 英伦鞋 布洛克鞋 增高鞋 正装鞋</p> 
+</div>
+<div id="apDiv3">
+<p><B>面部护肤></B>面霜 面部喷雾 防晒面部精华 唇部护理T区护理眼部护理 洗面奶化妆水T区护理/去角质护肤套装眼霜洁面晚霜嗜喱日霜卸妆补水面膜乳液</p>
+<p><B>彩妆香水></B>香水套装CC霜唇釉修颜妆前乳定妆喷雾BB霜/气垫 眼唇卸妆唇妆粉饼限线液/有 甲彩妆套装蜜粉眉粉粉底液眼影眉笔气垫bb遮瑕</p>
+<p><B>洗发护发></B>沐浴润 体发胶/发膜 定型护发精油 发膜染发护发无硅油洗发水洗发水防脱洗发水</p>
+<p><B>洗护套装护发素></B>身体乳护肤皂沐浴套装沐浴油/磨砂 沐浴需沐浴工具
+口腔护理>牙刷/牙线 牙育牙贴漱口水 口腔护理电动牙刷</p>
+<p><B>男士个护></B>男土面膜精华化妆水面部护肤护肤套装 剃须个护染发/造型 男士洗护 洗发沐浴 男土洁面男士香水面霜乳液须后水 剃须用品</p>
+<p><B>美妆工具
+></B>丰胸美胸胸部护理套装 护垫/棉条 卫生巾私处护理美体塑身 夜用卫生巾
+化妆美容工具 粉扑洁面仪面部护理工具 美容仪修眉刀剃脱毛器美甲工具化妆棉</p>
+</div>
+<div id="apDiv4">
+<p><B>运动服 ></B> 短袖T恤 运动裤 运动POLO 大logoT恤 潮服 运动套装 运动短裤 运动外套 运动夹克 女款裙子 速干T恤 运动卫衣 运动内衣 针织裤 </p>
+<p><B>运动鞋包></B> 运动休闲鞋 跑鞋 篮球鞋 凉拖鞋 帆布鞋 板鞋 足球鞋 小白鞋 老爹鞋 气垫鞋 潮鞋 运动背包 运动腰包 </p>
+
+<p><B>户外服 ></B> 皮肤风衣 户外T恤 速干衣 速干裤 户外休闲裤 软壳衣裤 冲锋衣裤 户外外套 功能内衣裤 抓绒衣裤 </p>
+<p><B>户外鞋 ></B> 徒步鞋 户外跑鞋 沙滩/凉拖鞋 溯溪鞋 越野鞋 登山鞋 工装靴</p>
+<p><B>运动配件</B> 运动包 运动袜 帽子 手套 护具 棒球帽 运动毛巾 水壶</p>
+</div>
+<div id="apDiv5">
+<p><B>热销手机手机配件></B>原装配件 苹果周边移动电源手机储存卡 手机耳机手机保护套 手机贴膜车载配件拍照配件数据线手机支架充电器</p>
+<p><B>智能影音></B>运动手环智能手表 耳机蓝牙耳机运动耳机便携/无线音箱 音箱/音响 投影仪智能监控</p>
+<p><B>电脑办公></B>平板电脑笔记本台式机- 体机显示器电纸书投影仪鼠标/键盘 U盘路由器平板电脑配件电子游戏设备插座其他电脑外设
+平板电脑笔记本台式机- 体机显示器</p>
+<p><B>摄影></B>单反相机数码相机微单/单电 摄像机自拍神器 拍立得</p>
+<p><B>生活电器></B>电饭煲电压力锅豆浆机破壁机榨汁杯养生壶电水壶/热水瓶料理机电磁炉/电陶炉</p>
+</div>
+<div id="apDiv6">
+<P><B>家纺床品></B>床上套件枕头婚庆床品全棉套件 床单/床笠 床垫床褥 毛毯被芯枕套被套儿童床品酒店家纺凉席蚊帐</P>
+<p><B>纸品/百贯></B>毛浴巾家居拖鞋浴室用品拖把个人用品 香薰用品纸巾洗衣液洁厕液清洁刷家庭清洁剂宠物日用净化除味-次性用品</p>
+<p><B>杯壶餐具></B>保温杯壶玻璃杯马克杯筷勺刀叉碗碟盘保鲜/饭盒 咖啡具茶具</p>
+<p><B>烹任炊具></B>锅具厨房置物架 刀具/剪刀 砧板调味瓶罐 厨用小工具 清洁保鲜 -次性用品 烧烤/烘焙</p>
+<p><B>收纳晾晒></B>收纳柜收纳箱 收纳盒 收纳包袋收纳架防尘罩 压缩袋衣架/振架 晾晒架鞋果</p>
+<p><B>家饰布艺></B>钟饰/摆件 装饰画抱枕/靠枕 坐垫/靠垫 桌布罩件 窗帘窗纱 地毯地垫 照片墙/相框 花瓶/仿真花鲜花绿植墙饰墙纸/墙贴</p>
+<p><B>浴/灯饰></B>吸顶灯吊灯萧地灯台灯浴霸/吊顶 开关五金锁具浴室柜 淋浴花洒 卫浴挂件浴缸/淋浴马桶台盆龙头水槽五金配件</p>
+
+</div>
+<div id="apDiv7">
+<p><B>全球馆 ></B> 欧洲馆 美洲馆 港台馆 日本馆 韩国馆 澳新馆</p>
+<p><B>国际美妆></B> 彩妆 洗面奶 面膜 水乳面霜 防晒修复 口红 护肤套装 眼部护理 男士护理 洗护染发 女性护理 个人护理 面部精华 爽肤水乳 卸妆</p>
+<p><B>唯品奢·女装></B> T恤 衬衫 外套 卫衣 西服 连衣裙 半身裙 牛仔裤 休闲裤 家居服 </p>
+<p><B>环球母婴></B> 孕婴营养 儿童营养 洗护喂养 奶粉 纸尿裤 婴童辅食 玩具出行 妈咪用品 童装童鞋</p>
+<p><B>唯品奢·男装></B> POLO衫 T恤 卫衣 背心 衬衫 家居服 西服 外套 休闲裤 西裤 牛仔裤 短裤 内裤</p>
+</div>
+<div id="classify">
+        <ul>
+            <li>
+            	<a href="index.html">
+                	商品分类
+           		<img src="img/category.png">
+                </a>
+           	  <dt>
+                        	<a href="#">
+                    	<dd onmouseover="MM_showHideLayers('apDiv1','','show','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            女装/男装
+                          </dd></a>
+                        
+              <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','show','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            女鞋/男鞋
+                            </a>
+              </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','show','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            护肤彩妆
+                            </a>
+                        </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','show','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            运动户外
+                            </a>
+                        </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','show','apDiv6','','hide','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide'),'apDiv7','','hide'">
+                        	<a href="#">
+                            家电数码
+                            </a>
+                        </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','show','apDiv7','','hide')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            居家用品
+                        	</a>
+                        </dd>
+                        <dd onmouseover="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','show')" onmouseout="MM_showHideLayers('apDiv1','','hide','apDiv2','','hide','apDiv3','','hide','apDiv4','','hide','apDiv5','','hide','apDiv6','','hide','apDiv7','','hide')">
+                        	<a href="#">
+                            唯品国际
+                        	</a>
+                        </dd>
+                    </dt>
+            </li>
+            <li>
+            	<a href="index.html">
+            		首页
+            	</a>
+            </li>
+            <li>
+            	<a href="#">
+            		唯品快抢
+            	</a>
+            </li>
+            <li>
+            	<a href="xiebao.html">
+            		精品
+            	</a>
+            </li>
+          <li>
+            	<a href="#content3-2">
+            		女装
+            	</a>
+            </li>
+            <li>
+            	<a href="#content3-3">
+            		男装
+           	  </a>
+            </li>
+            <li>
+            	<a href="#content3-4">
+            		运动
+           	  </a>
+            </li>
+            <li>
+            	<a href="#content3-5">
+            		饰品
+            	</a>
+            </li>
+            <li>
+            	<a href="beauty-makeup.html">
+            		美妆
+            	</a>
+            </li>
+            
+          <li>
+            	<a href="#">
+           		 更多
+            		<img src="img/arrow-down.png">
+                    <dt>
+           	<dd><a href="#content3-7">居家品牌</dd></a>
+                        <dd><a href="#content3-8">国际品牌</a></dd>
+                        <dd><a href="yugao.html">预告</a></dd>
+                    </dt>
+            	</a>
+            </li>
+        </ul>
+    </div>
+	<div class="shang">
+		<img src="img/2.png" width="100%" height="350px">
+	</div>
+	<div class="three"></div>
+	<div class="four">
+		<hr style="width:480px;background-color:#E277C8;border: none;height:1px;float: left;margin-top: 12px">
+		<span style="float:left;font-weight: 500px;font-size: 22px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;精&nbsp;品&nbsp;分&nbsp;类
+		</span>
+		<hr style="width:480px;background-color:#E277C8;border: none;height:1px;float:right;margin-top: 12px"><br>
+		<span style="font-size:10px;color:#858585;margin-left: -100px;margin-top: 200px">
+			SELEO&nbsp;CATEGORIES
+		</span>
+	</div>
+	
+
+	<div id="qwe">
+		<div class="tenzuo">
+			<li><img src="img/55_看图王.web.png" width="80px" height:"80px">运动休闲鞋</li>
+			<li><img src="img/56_看图王.web.png" width="80px" height:"80px">时髦跑鞋</li>
+			<li><img src="img/57_看图王.web.png" width="80px" height:"80px">棉羽服</li>
+			<li><img src="img/58_看图王.web.png" width="80px" height:"80px">舒适运动裤</li>
+			<li><img src="img/60_看图王.web.png" width="80px" height:"80px">运动套装</li>
+			<li><img src="img/307.png" width="80px" height:"100px">更多分类</li>
+			
+			
+		</div>
+		<div class="ten">
+			<ul class="ten-list">
+				<li class="ten-item-frist">
+					<a href="javascript:;">小家电</a>
+					<div class="show">
+						<ul class="show-item">
+							<li class="shop-item"><img src="img/200_看图王.web.png" width="80px" height:"80px">电饭煲</li>
+							<li class="shop-item"><img src="img/201_看图王.web.png" width="80px" height:"80px">电压力煲</li>
+							<li class="shop-item"><img src="img/202_看图王.web.png" width="80px" height:"80px">豆浆机</li>
+							<li class="shop-item"><img src="img/203_看图王.web.png" width="80px" height:"80px">电热水壶</li>
+							<li class="shop-item"><img src="img/204_看图王.web.png" width="80px" height:"80px">榨汁机</li>
+							<li class="shop-item"><img src="img/307.png" width="80px" height:"100px">更多分类</li>
+						</ul>
+					</div>
+				</li>
+				<li class="ten-item-frist">
+					<a href="javascript:;">童装</a>
+					<div class="show">
+						<ul class="show-item">
+							<li class="shop-item"><img src="img/300.jpg" width="80px" height:"80px">女童羽绒服</li>
+							<li class="shop-item"><img src="img/301.jpg" width="80px" height:"80px">男童羽绒服</li>
+							<li class="shop-item"><img src="img/303.png" width="80px" height:"80px">卫衣T恤</li>
+							<li class="shop-item"><img src="img/304.png" width="80px" height:"80px">女童裤装</li>
+							<li class="shop-item"><img src="img/306.png" width="80px" height:"80px">儿童袜子</li>
+							<li class="shop-item"><img src="img/307.png" width="80px" height:"100px">更多分类</li>
+						</ul>
+					</div>
+				</li>
+				<li class="ten-item-frist">
+					<a href="javascript:;">玩具</a>
+					<div class="show">
+						<ul class="show-item">
+							<li class="shop-item"><img src="img/400.png" width="80px" height:"80px">积木拼插</li>
+							<li class="shop-item"><img src="img/401.png" width="80px" height:"80px">婴幼益智</li>
+							<li class="shop-item"><img src="img/402.png" width="80px" height:"80px">户外健身</li>
+							<li class="shop-item"><img src="img/403.png" width="80px" height:"80px">毛绒公仔</li>
+							<li class="shop-item"><img src="img/404.png" width="80px" height:"80px">模型动漫</li>
+							<li class="shop-item"><img src="img/307.png" width="80px" height:"100px">更多分类</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		
+	</div>
+
+
+
+
+
+	
+	<div class="zhong">
+		<ul style="line-height: 100px;text-align: center;font-size: 28px;">品牌特卖&nbsp;每天早10晚8上新</ul>
+	</div>
+	<div id="xia">
+		<div class="zuo">
+			<a href="#"><img src="img/3.1.jpg" width="583px" height="290px"></a>
+		</div>
+		<div class="you">
+			<a href="#"><img src="img/4.1.jpg"  width="583px" height="290px"></a>
+		</div>
+	</div>
+	<div id="end">
+		<div class="a">
+			<a href="#"><img src="img/5.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥19</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥298&nbsp;&nbsp;0.6折</span>
+		</div>
+		<div class="b">
+			<a href="#"><img src="img/6.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥10</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥139&nbsp;&nbsp;0.7折</span>
+		</div>
+		<div class="c">
+			<a href="#"><img src="img/7.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥15</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥69&nbsp;&nbsp;2.2折</span>
+		</div>
+		<div class="d">
+			<a href="#"><img src="img/10.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥298</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥3188&nbsp;&nbsp;0.9折</span>
+		</div>
+		<div class="e">
+			<a href="#"><img src="img/9.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥159</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥729&nbsp;&nbsp;2.2折</span>
+		</div>
+		<div class="f">
+			<a href="#"><img src="img/8.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥119</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥1089&nbsp;&nbsp;1.1折</span>
+		</div>
+	</div>
+	<div id="finally">
+		<div class="one">
+			<br><span style="color:#FF0000;margin-left: 10px;font-weight: 550;font-size: 25px">3</span>
+			<span style="color:#858585;font-size: 13px">折封顶</span>
+			<span style="color:#858585;font-size: 15px">&nbsp;&nbsp;美妆达人推荐TOP-最后疯抢专场</span>
+		</div>
+		<div class="two">
+			<br><span style="color:#FF0000;margin-left: 10px;font-weight: 550;font-size: 25px">3</span>
+			<span style="color:#858585;font-size: 13px">折封顶</span>
+			<span style="color:#858585;font-size: 15px">&nbsp;&nbsp;艾维I.WILL家纺-最后疯抢专场</span>
+		</div>
+	</div>
+	<div id="love">
+		<div class="g">
+			<a href="#"><img src="img/11.1.jpg"  width="583px" height="290px"></a>
+		</div>
+		<div class="h">
+			<a href="#"><img src="img/12.1.jpg"  width="583px" height="290px"></a>
+		</div>
+	</div>
+	<div id="like">
+		<div class="i">
+			<a href="#"><img src="img/13.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥249</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥898&nbsp;&nbsp;0.8折</span>
+		</div>
+		<div class="j">
+			<a href="#"><img src="img/14.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥160</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥749&nbsp;&nbsp;0.5折</span>
+		</div>
+		<div class="k">
+			<a href="#"><img src="img/15.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥319</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥669&nbsp;&nbsp;2.2折</span>
+		</div>
+		<div class="l">
+			<a href="#"><img src="img/18.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥69</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥388&nbsp;&nbsp;0.9折</span>
+		</div>
+		<div class="m">
+			<a href="#"><img src="img/17.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥119</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥729&nbsp;&nbsp;2.2折</span>
+		</div>
+		<div class="n">
+			<a href="#"><img src="img/16.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥135</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥1089&nbsp;&nbsp;0.1折</span>
+		</div>
+	</div>
+	<div id="lone">
+		<div class="o">
+			<br><span style="color:#FF0000;margin-left: 10px;font-weight: 550;font-size: 25px">3</span>
+			<span style="color:#858585;font-size: 13px">折封顶</span>
+			<span style="color:#858585;font-size: 15px">&nbsp;&nbsp;米思阳missshine女装-3折封顶疯抢专场</span>
+		</div>
+		<div class="p">
+			<br><span style="color:#FF0000;margin-left: 10px;font-weight: 550;font-size: 25px">3</span>
+			<span style="color:#858585;font-size: 13px">折封顶</span>
+			<span style="color:#858585;font-size: 15px">&nbsp;&nbsp;润微文胸&家居服-最后疯抢专场</span>
+		</div>
+	</div>
+	<div id="aaa">
+		<div class="q">
+			<a href="#"><img src="img/19.1.jpg"  width="583px" height="290px"></a>
+		</div>
+		<div class="r">
+			<a href="#"><img src="img/20.1.jpg"  width="583px" height="290px"></a>
+		</div>
+	</div>
+	<div id="bbb">
+		<div class="aq">
+			<a href="#"><img src="img/21.1.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥143</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥599&nbsp;&nbsp;0.6折</span>
+		</div>
+		<div class="aw">
+			<a href="#"><img src="img/22.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥49</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥139&nbsp;&nbsp;0.7折</span>
+		</div>
+		<div class="ae">
+			<a href="#"><img src="img/23.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥55</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥169&nbsp;&nbsp;2.2折</span>
+		</div>
+		<div class="ar">
+			<a href="#"><img src="img/24.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥139</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥988&nbsp;&nbsp;0.9折</span>
+		</div>
+		<div class="at">
+			<a href="#"><img src="img/25.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥179</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥799&nbsp;&nbsp;2.2折</span>
+		</div>
+		<div class="ay">
+			<a href="#"><img src="img/26.jpg"  width="182px" height="190px"></a>
+			<span style="color:#FF0000;margin-left: 10px;font-weight: 550">￥119</span>
+			<span style="color:#858585;font-size: 13px">&nbsp;¥1089&nbsp;&nbsp;1.1折</span>
+		</div>
+	</div>
+	<div id="ccc">
+		<div class="au">
+			<br><span style="color:#FF0000;margin-left: 10px;font-weight: 550;font-size: 25px">3</span>
+			<span style="color:#858585;font-size: 13px">折封顶</span>
+			<span style="color:#858585;font-size: 15px">&nbsp;&nbsp;多拉美家居服-最后疯抢专场</span>
+		</div>
+		<div class="ai">
+			<br><span style="color:#FF0000;margin-left: 10px;font-weight: 550;font-size: 25px">3</span>
+			<span style="color:#858585;font-size: 13px">折封顶</span>
+			<span style="color:#858585;font-size: 15px">&nbsp;&nbsp;南极人家纺专场-最后疯抢专场</span>
+		</div>
+	</div>
+	<div class="nmb">
+		<hr size="1" color="#000000"><br>
+    	<div id="ending1">关于我们| About us| Investor Relations| 媒体报道| 品牌招商| 隐私条款| 唯品诚聘| 唯品卡| 联系我们 </div>
+        <p>Copyright © 2008-2019 vip.com，All Rights Reserved  使用本网站即表示接受 唯品会用户协议。版权所有 广州唯品会电子商务有限公司</p> 
+<p><img src="img/police_icon.png">粤公网安备 44010302111111号    粤ICP备08114786号 增值业务经营许可证：粤B2-20170777  网络文化经营许可证：粤网文〔2018〕5030-1743号 </p>
+<p>自营主体经营证照   风险监测信息   互联网药品信息服务资格证书：（粤）-经营性-2018-0271 网络食品交易第三方平台备案凭证：粤B2-20170777  医疗器械网络交易服务第三方</p>
+<p>平台备案凭证：（粤）网械平台备字[2019]第00001号 </p>  
+    </div>
+	</div>
+</body>
+</html>
